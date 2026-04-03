@@ -106,6 +106,7 @@
         "symfony/debug-bundle": "8.0.*",
         "symfony/maker-bundle": "^1.67",
         "symfony/stopwatch": "8.0.*",
+        "symfony/ux-toolkit": "^2.34",
         "symfony/web-profiler-bundle": "8.0.*"
     }
 }
