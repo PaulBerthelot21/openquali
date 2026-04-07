@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Design System - Button{% endblock %}
+
+{% block body %}
+<main class="mx-auto max-w-5xl space-y-10 px-6 py-10">
+    <header class="space-y-2">
+        <p class="text-sm text-muted-foreground">Design System</p>
+        <h1 class="text-3xl font-semibold tracking-tight">Button</h1>
+        <p class="text-sm text-muted-foreground">Variantes, tailles et etats du composant.</p>
+    </header>
+
+    <section class="space-y-4">
+        <h2 class="text-lg font-medium">Variantes</h2>
+        <div class="flex flex-wrap items-center gap-3">
+            <twig:Button>Default</twig:Button>
+            <twig:Button variant="secondary">Secondary</twig:Button>
+            <twig:Button variant="destructive">Destructive</twig:Button>
+            <twig:Button variant="outline">Outline</twig:Button>
+            <twig:Button variant="ghost">Ghost</twig:Button>
+            <twig:Button variant="link">Link</twig:Button>
+        </div>
+    </section>
+
+    <section class="space-y-4">
+        <h2 class="text-lg font-medium">Tailles</h2>
+        <div class="flex flex-wrap items-center gap-3">
+            <twig:Button size="xs">Extra small</twig:Button>
+            <twig:Button size="sm">Small</twig:Button>
+            <twig:Button size="default">Default</twig:Button>
+            <twig:Button size="lg">Large</twig:Button>
+            <twig:Button size="icon" aria-label="Settings">
+                <twig:ux:icon name="lucide:settings" />
+            </twig:Button>
+            <twig:Button size="icon-sm" aria-label="Search">
+                <twig:ux:icon name="lucide:search" />
+            </twig:Button>
+        </div>
+    </section>
+
+    <section class="space-y-4">
+        <h2 class="text-lg font-medium">Etats</h2>
+        <div class="flex flex-wrap items-center gap-3">
+            <twig:Button disabled>Disabled</twig:Button>
+            <twig:Button variant="outline" disabled>Disabled outline</twig:Button>
+            <twig:Button>
+                <twig:ux:icon name="lucide:download" />
+                Download
+            </twig:Button>
+            <twig:Button disabled>
+                <twig:ux:icon name="lucide:loader-2" class="animate-spin" />
+                Please wait
+            </twig:Button>
+        </div>
+    </section>
+</main>
+{% endblock %}
