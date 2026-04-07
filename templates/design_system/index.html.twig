@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Design System - Button{% endblock %}
+{% block title %}Design System{% endblock %}
 
 {% block body %}
 <main class="mx-auto max-w-5xl space-y-10 px-6 py-10">
     <header class="space-y-2">
         <p class="text-sm text-muted-foreground">Design System</p>
-        <h1 class="text-3xl font-semibold tracking-tight">Button</h1>
-        <p class="text-sm text-muted-foreground">Variantes, tailles et etats du composant.</p>
+        <h1 class="text-3xl font-semibold tracking-tight">Composants UI</h1>
+        <p class="text-sm text-muted-foreground">Demos rapides.</p>
     </header>
 
     <section class="space-y-4">
@@ -51,6 +51,21 @@
                 <twig:ux:icon name="lucide:loader-2" class="animate-spin" />
                 Please wait
             </twig:Button>
+        </div>
+    </section>
+
+    <section class="space-y-4">
+        <h2 class="text-lg font-medium">Badges</h2>
+        <div class="flex flex-wrap items-center gap-3">
+            <twig:Badge>Default</twig:Badge>
+            <twig:Badge variant="secondary">Secondary</twig:Badge>
+            <twig:Badge variant="destructive">Destructive</twig:Badge>
+            <twig:Badge variant="outline">Outline</twig:Badge>
+            <twig:Badge>
+                <twig:ux:icon name="lucide:circle-check" />
+                Success
+            </twig:Badge>
+            <twig:Badge as="a" href="#" variant="secondary">Linked badge</twig:Badge>
         </div>
     </section>
 </main>
