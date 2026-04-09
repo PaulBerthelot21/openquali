@@ -68,5 +68,38 @@
             <twig:Badge as="a" href="#" variant="secondary">Linked badge</twig:Badge>
         </div>
     </section>
+
+    <section class="space-y-4">
+        <h2 class="text-lg font-medium">Select</h2>
+        <div class="grid gap-4 sm:grid-cols-2">
+            <label class="space-y-2">
+                <span class="text-sm font-medium">Projet</span>
+                <twig:Select name="project">
+                    <option value="">Choisir un projet</option>
+                    <option value="openquali">OpenQuali</option>
+                    <option value="api">API Platform</option>
+                    <option value="website">Website</option>
+                </twig:Select>
+            </label>
+
+            <label class="space-y-2">
+                <span class="text-sm font-medium">Priorite</span>
+                <twig:Select name="priority">
+                    <option value="low">Basse</option>
+                    <option value="medium" selected>Moyenne</option>
+                    <option value="high">Haute</option>
+                </twig:Select>
+            </label>
+
+            <label class="space-y-2">
+                <span class="text-sm font-medium">Statut</span>
+                <twig:Select name="status" disabled>
+                    <option value="draft">Brouillon</option>
+                    <option value="review">En revue</option>
+                    <option value="done">Publie</option>
+                </twig:Select>
+            </label>
+        </div>
+    </section>
 </main>
 {% endblock %}
